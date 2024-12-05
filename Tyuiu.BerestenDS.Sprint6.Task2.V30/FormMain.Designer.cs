@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            textBoxStart = new TextBox();
-            textBoxStop = new TextBox();
+            textBox_StartValue = new TextBox();
+            textBox_StopValue = new TextBox();
             label1 = new Label();
             label2 = new Label();
             buttonHelp = new Button();
@@ -44,19 +44,21 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewFunction).BeginInit();
             SuspendLayout();
             // 
-            // textBoxStart
+            // textBox_StartValue
             // 
-            textBoxStart.Location = new Point(24, 398);
-            textBoxStart.Name = "textBoxStart";
-            textBoxStart.Size = new Size(86, 27);
-            textBoxStart.TabIndex = 0;
+            textBox_StartValue.Location = new Point(24, 398);
+            textBox_StartValue.Name = "textBox_StartValue";
+            textBox_StartValue.Size = new Size(86, 27);
+            textBox_StartValue.TabIndex = 0;
+            textBox_StartValue.TextChanged += start_Click;
             // 
-            // textBoxStop
+            // textBox_StopValue
             // 
-            textBoxStop.Location = new Point(139, 398);
-            textBoxStop.Name = "textBoxStop";
-            textBoxStop.Size = new Size(93, 27);
-            textBoxStop.TabIndex = 1;
+            textBox_StopValue.Location = new Point(139, 398);
+            textBox_StopValue.Name = "textBox_StopValue";
+            textBox_StopValue.Size = new Size(93, 27);
+            textBox_StopValue.TabIndex = 1;
+            textBox_StopValue.TextChanged += stop_Click;
             // 
             // label1
             // 
@@ -95,7 +97,6 @@
             buttonDone.TabIndex = 5;
             buttonDone.Text = "Выполнить";
             buttonDone.UseVisualStyleBackColor = false;
-            buttonDone.Click += buttonDone_Click;
             // 
             // label3
             // 
@@ -154,8 +155,8 @@
             Controls.Add(buttonHelp);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBoxStop);
-            Controls.Add(textBoxStart);
+            Controls.Add(textBox_StopValue);
+            Controls.Add(textBox_StartValue);
             MaximizeBox = false;
             Name = "FormMain";
             Text = "Берестень Денис / ИБКСБ24-1";
@@ -168,8 +169,8 @@
 
         #endregion
 
-        private TextBox textBoxStart;
-        private TextBox textBoxStop;
+        private TextBox textBox_StartValue;
+        private TextBox textBox_StopValue;
         private Label label1;
         private Label label2;
         private Button buttonHelp;
