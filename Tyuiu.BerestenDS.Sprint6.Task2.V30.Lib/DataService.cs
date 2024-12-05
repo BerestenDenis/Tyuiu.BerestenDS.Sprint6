@@ -5,20 +5,22 @@ namespace Tyuiu.BerestenDS.Sprint6.Task2.V30.Lib
     {
         public double[] GetMassFunction(int startValue, int stopValue)
         {
-            int len = stopValue - startValue + 1;
-            double[] res = new double[len];
+            int len = Math.Abs(startValue) + stopValue + 1;
             int count = 0;
+            double[] res = new double[len];
             for (int i = startValue; i <= stopValue; i++)
             {
-                double y = ((5 * i + 2.5) / Math.Sin(i) + 3) + 2 * i + Math.Cos(i);
-
-                if (Math.Sin(i) == -1)
+                if ((2 - i) == 0)
                 {
-                    res[i] = 0;
+                    res[count] = 0;
                 }
-                res[count] = y;
-
+                else
+                {
+                    res[count] = ((5 * i + 2.5) / (Math.Sin(i)+3)) + (2 * i + Math.Cos(i));
+                    res[count] = Math.Round((res[count]), 3);
+                }
                 count++;
+
             }
             return res;
         }

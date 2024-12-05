@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            textBox_StartValue = new TextBox();
-            textBox_StopValue = new TextBox();
+            textBoxStartValue = new TextBox();
+            textBoxStopValue = new TextBox();
             label1 = new Label();
             label2 = new Label();
             buttonHelp = new Button();
@@ -44,21 +44,19 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewFunction).BeginInit();
             SuspendLayout();
             // 
-            // textBox_StartValue
+            // textBoxStartValue
             // 
-            textBox_StartValue.Location = new Point(24, 398);
-            textBox_StartValue.Name = "textBox_StartValue";
-            textBox_StartValue.Size = new Size(86, 27);
-            textBox_StartValue.TabIndex = 0;
-            textBox_StartValue.TextChanged += start_Click;
+            textBoxStartValue.Location = new Point(24, 398);
+            textBoxStartValue.Name = "textBoxStartValue";
+            textBoxStartValue.Size = new Size(86, 27);
+            textBoxStartValue.TabIndex = 0;
             // 
-            // textBox_StopValue
+            // textBoxStopValue
             // 
-            textBox_StopValue.Location = new Point(139, 398);
-            textBox_StopValue.Name = "textBox_StopValue";
-            textBox_StopValue.Size = new Size(93, 27);
-            textBox_StopValue.TabIndex = 1;
-            textBox_StopValue.TextChanged += stop_Click;
+            textBoxStopValue.Location = new Point(139, 398);
+            textBoxStopValue.Name = "textBoxStopValue";
+            textBoxStopValue.Size = new Size(93, 27);
+            textBoxStopValue.TabIndex = 1;
             // 
             // label1
             // 
@@ -97,6 +95,7 @@
             buttonDone.TabIndex = 5;
             buttonDone.Text = "Выполнить";
             buttonDone.UseVisualStyleBackColor = false;
+            buttonDone.Click += buttonDone_Click;
             // 
             // label3
             // 
@@ -124,7 +123,7 @@
             dataGridViewFunction.Name = "dataGridViewFunction";
             dataGridViewFunction.RowHeadersVisible = false;
             dataGridViewFunction.RowHeadersWidth = 51;
-            dataGridViewFunction.Size = new Size(103, 388);
+            dataGridViewFunction.Size = new Size(121, 388);
             dataGridViewFunction.TabIndex = 8;
             // 
             // X
@@ -155,12 +154,11 @@
             Controls.Add(buttonHelp);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox_StopValue);
-            Controls.Add(textBox_StartValue);
+            Controls.Add(textBoxStopValue);
+            Controls.Add(textBoxStartValue);
             MaximizeBox = false;
             Name = "FormMain";
             Text = "Берестень Денис / ИБКСБ24-1";
-            Load += FormMain_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFunction).EndInit();
             ResumeLayout(false);
@@ -169,8 +167,8 @@
 
         #endregion
 
-        private TextBox textBox_StartValue;
-        private TextBox textBox_StopValue;
+        private TextBox textBoxStartValue;
+        private TextBox textBoxStopValue;
         private Label label1;
         private Label label2;
         private Button buttonHelp;
