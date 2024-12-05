@@ -10,7 +10,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task2.V30.Lib
             int count = 0;
             for (int i = startValue; i <= stopValue; i++)
             {
-                double y = ((5*i+2.5)/Math.Sin(i)+3)+2*i+Math.Cos(i);
+                double y = ((5 * i + 2.5) / Math.Sin(i) + 3) + 2 * i + Math.Cos(i);
 
                 if (Math.Sin(i) == -1)
                 {
@@ -22,6 +22,5 @@ namespace Tyuiu.BerestenDS.Sprint6.Task2.V30.Lib
             }
             return res;
         }
-    }
     }
 }

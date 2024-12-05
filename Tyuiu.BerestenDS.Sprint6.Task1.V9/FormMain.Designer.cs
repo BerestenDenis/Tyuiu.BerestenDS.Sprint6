@@ -141,6 +141,7 @@
             MaximizeBox = false;
             Name = "FormMain";
             Text = "Берестень Денис ИБКСБ24-1";
+            Load += FormMain_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxTask).EndInit();
             ResumeLayout(false);
             PerformLayout();

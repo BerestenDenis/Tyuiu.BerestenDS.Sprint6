@@ -1,7 +1,5 @@
-using System.Drawing.Text;
-using Tyuiu.BerestenDS.Sprint6.Task1.V9;
-using Tyuiu.BerestenDS.Sprint6.Task1.V9.Lib;
-namespace Tyuiu.BerestenDS.Sprint6.Task1.V9
+using Tyuiu.BerestenDS.Sprint6.Task2.V30.Lib;
+namespace Tyuiu.BerestenDS.Sprint6.Task2.V30
 {
     public partial class FormMain : Form
     {
@@ -10,7 +8,6 @@ namespace Tyuiu.BerestenDS.Sprint6.Task1.V9
             InitializeComponent();
         }
         DataService ds = new DataService();
-
         private void buttonDone_Click(object sender, EventArgs e)
         {
             try
@@ -22,15 +19,15 @@ namespace Tyuiu.BerestenDS.Sprint6.Task1.V9
                 double[] valueArray;
                 valueArray = new double[len];
                 valueArray = ds.GetMassFunction(startValue, stopValue);
-                textBoxResult.Text = "";
-                textBoxResult.AppendText("+------+------+" + Environment.NewLine);
-                textBoxResult.AppendText("|  x  |  F(x)  |" + Environment.NewLine);
-                textBoxResult.AppendText("+------+------+" + Environment.NewLine);
+                this.chartFunction.Title.Add("График функций sin(x)");
+                this.chartFunction.ChartAreas[0].AxisX.Title = "Ось X";
+                this.chartFunction.ChartAreas[0].AxisY.Title = "Ось Y";
                 for (int i = 0; i <= len - 1; i++)
                 {
-                    strline = String.Format("|{0,7:d}   ||{1, 7:f2}   |", startValue, valueArray[i]);
-                    textBoxResult.AppendText(strline + Environment.NewLine);
+                    this.dataGridViewFunction.Rows.Add(Convert.ToString(startValue), Convert.ToString(valueArray));
+                    this.chartFunction.Series[0].Points.AddXY(startValue, valueArray[i]);
                     startValue++;
+
                 }
             }
             catch
@@ -39,10 +36,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task1.V9
 
             }
         }
-        private void buttonHelp_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("таск 1 выполнил берестень денис ибксб24-1", "сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+
 
         private void FormMain_Load(object sender, EventArgs e)
         {
