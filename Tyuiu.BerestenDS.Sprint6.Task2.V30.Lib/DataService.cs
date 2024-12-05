@@ -12,7 +12,8 @@ namespace Tyuiu.BerestenDS.Sprint6.Task2.V30.Lib
             {
                 if ((2 - i) == 0)
                 {
-                    res[count] = 0;
+                    res[count] = ((5 * i + 2.5) / (Math.Sin(i) + 3)) + (2 * i + Math.Cos(i));
+                    res[count] = Math.Round((res[count]), 2);
                 }
                 else
                 {

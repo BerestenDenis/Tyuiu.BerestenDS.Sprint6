@@ -28,7 +28,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task2.V30
             }
             catch
             {
-                MessageBox.Show("Ââåäåíû íåâåðíûå äàííûå", "Îøèáêà", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Eror", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -36,7 +36,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task2.V30
 
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ñäåëàë ñòóäåíò ãð. ÈÁÊÑá-24-1 Øìèäò Àíäðåé Àíäðååâè÷", "Ñîîáùåíèå", MessageBoxButtons.OK);
+            MessageBox.Show("Beresten Denis", "LDA", MessageBoxButtons.OK);
         }
     }
 }

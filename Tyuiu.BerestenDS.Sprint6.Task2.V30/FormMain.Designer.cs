@@ -85,6 +85,7 @@
             buttonHelp.TabIndex = 4;
             buttonHelp.Text = "Help";
             buttonHelp.UseVisualStyleBackColor = false;
+            buttonHelp.Click += buttonHelp_Click;
             // 
             // buttonDone
             // 
