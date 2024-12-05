@@ -35,6 +35,9 @@
             buttonHelp = new Button();
             textBoxStart = new TextBox();
             textBoxStop = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxTask).BeginInit();
             SuspendLayout();
             // 
@@ -50,7 +53,7 @@
             // 
             // textBoxResult
             // 
-            textBoxResult.Location = new Point(577, 12);
+            textBoxResult.Location = new Point(577, 35);
             textBoxResult.Multiline = true;
             textBoxResult.Name = "textBoxResult";
             textBoxResult.ReadOnly = true;
@@ -94,11 +97,41 @@
             textBoxStop.Size = new Size(90, 27);
             textBoxStop.TabIndex = 6;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 363);
+            label1.Name = "label1";
+            label1.Size = new Size(114, 20);
+            label1.TabIndex = 7;
+            label1.Text = "Стартовый шаг";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(156, 363);
+            label2.Name = "label2";
+            label2.Size = new Size(91, 20);
+            label2.TabIndex = 8;
+            label2.Text = "Конец шага";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(577, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(75, 20);
+            label3.TabIndex = 9;
+            label3.Text = "Результат";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(textBoxStop);
             Controls.Add(textBoxStart);
             Controls.Add(buttonHelp);
@@ -121,5 +154,8 @@
         private Button buttonHelp;
         private TextBox textBoxStart;
         private TextBox textBoxStop;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }
