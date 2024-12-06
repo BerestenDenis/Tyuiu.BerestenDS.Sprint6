@@ -5,20 +5,23 @@ namespace Tyuiu.BerestenDS.Sprint6.Task3.V5.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetLength(0);
-            int[] temp = new int[rows];
+            int rows = matrix.GetUpperBound(0) + 1;
+            int columns = matrix.Length / rows;
+            int[,] array = new int[rows, columns];
             for (int i = 0; i < rows; i++)
             {
-                temp[i] = matrix[2, i];
-                Console.Write(matrix[2, i]);
+                for (int j = 0; j < columns; j++)
+                {
+                    if ((i == 2) && (matrix[i, j] < matrix[i, j + 1]))
+                    {
+                        array[i, j] = matrix[i,j];
+                    }
+                    else
+                    {
+                    }
+                }
             }
-            Array.Sort(temp);
-            for (int i = 0; i < rows; i++)
-            {
-                matrix[2, i] = temp[i];
-                Console.Write(matrix[2, i]);
-            }
-            return matrix;
+            return array;
         }
     }
 }
