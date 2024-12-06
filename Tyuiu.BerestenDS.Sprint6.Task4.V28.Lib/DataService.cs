@@ -10,7 +10,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task4.V28.Lib
             int count = 0;
             for (int i = startValue; i <= stopValue; i++)
             {
-                double y = Math.Round((Math.Cos(2 * i)) + ((Math.Sin(i))/(i+2.5))+(2*i),3);
+                double y = Math.Round((Math.Cos(2 * i)) + ((Math.Sin(i))/(i+2.5))+(2*i),2);
                 res[count] = y;
                 count++;
             
