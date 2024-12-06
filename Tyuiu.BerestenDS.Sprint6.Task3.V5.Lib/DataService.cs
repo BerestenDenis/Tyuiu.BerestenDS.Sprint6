@@ -18,6 +18,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task3.V5.Lib
                     }
                     else
                     {
+                        array[i,j] = matrix[i,j + 1];
                     }
                 }
             }
