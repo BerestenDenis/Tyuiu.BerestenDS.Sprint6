@@ -5,17 +5,24 @@ namespace Tyuiu.BerestenDS.Sprint6.Task3.V5.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            var sortedArray = Enumerable.Range(0, matrix.GetLength(0))
-                .Select(i => new {
-                    Col0 = matrix[i, 0],
-                    Col1 = matrix[i, 1],
-                    Col2 = matrix[i, 2],
-                    Col3 = matrix[i, 3],
-                    Col4 = matrix[i, 4]
-                })
-                .OrderBy(row => row.Col2) // Сортируем по третьему столбцу
-                .ToArray();
-            return matrix;
+            int rows = matrix.GetUpperBound(0) + 1;
+            int columns = matrix.Length / rows;
+            int[,] array = new int[rows, columns];
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if ((i == 2) && (matrix[i, j] % 2 == 0))
+                    {
+                        array[i, j] = 0;
+                    }
+                    else
+                    {
+                        array[i, j] = matrix[i, j];
+                    }
+                }
+            }
+            return array;
         }
     }
 }
