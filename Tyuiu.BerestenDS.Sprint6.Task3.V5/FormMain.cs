@@ -38,7 +38,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task3.V5
         private void buttonDone_Click(object sender, EventArgs e)
         {
             mtrx = ds.Calculate(mtrx);
-            int rows = mtrx.GetUpperBound(0) + 1;
+            int rows = mtrx.GetUpperBound(0)+1;
             int columns = mtrx.Length / rows;
             for (int i = 0; i < rows; i++)
             {
