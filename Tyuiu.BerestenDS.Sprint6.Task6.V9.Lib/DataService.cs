@@ -13,7 +13,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task6.V9.Lib
                 string lines;
                 while ((lines = sr.ReadLine()) != null)
                 {
-                    resStr = resStr + lines.Split(' ').LastOrDefault();
+                    resStr = resStr + lines.Split(' ').LastOrDefault()+ " ";
                 }
 
             }
