@@ -25,7 +25,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task7.V18.Lib
             {
                 for (int c = 0; c < cols; c++)
                 {
-                    if( c == 9)
+                    if( c == 8)
                     {
                         mtrx[i, c] = 11;
                     }
