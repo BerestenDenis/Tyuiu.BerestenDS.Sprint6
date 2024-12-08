@@ -23,7 +23,10 @@ namespace Tyuiu.BerestenDS.Sprint6.Task7.V18.Lib
 
             for(int i = 0; i < rows; i++)
             {
-                mtrx[i, 9] = 11;
+                if (mtrx[i,9] != 11)
+                {
+                    mtrx[i, 9] = 11;
+                }
             }
             return mtrx;
         }
