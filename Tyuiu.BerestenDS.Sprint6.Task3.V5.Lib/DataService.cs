@@ -15,12 +15,17 @@ namespace Tyuiu.BerestenDS.Sprint6.Task3.V5.Lib
 
                 }
             }
-            Array.Sort(rows, (a, b) => a[1].CompareTo(b[2]));
+            Array.Sort(rows, (a, b) => a[2].CompareTo(b[2]));
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = rows[i][j];
+                    if (j == 2)
+                    {
+                        matrix[i, j] = rows[i][j];
+
+                    }
+                    
 
                 }
             }
