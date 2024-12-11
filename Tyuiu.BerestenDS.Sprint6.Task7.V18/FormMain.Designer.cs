@@ -54,7 +54,6 @@
             buttonDone.Name = "buttonDone";
             buttonDone.Size = new Size(57, 51);
             buttonDone.TabIndex = 0;
-            buttonDone.Text = "Done";
             buttonDone.UseVisualStyleBackColor = true;
             buttonDone.Click += buttoneDone_Click;
             // 

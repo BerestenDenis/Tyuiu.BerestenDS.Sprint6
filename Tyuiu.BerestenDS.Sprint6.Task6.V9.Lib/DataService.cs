@@ -18,6 +18,7 @@ namespace Tyuiu.BerestenDS.Sprint6.Task6.V9.Lib
 
             }
             return Regex.Replace(resStr, @"\s+$", "");
+
         }
     }
 }

@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             textBoxLoad = new TextBox();
             textBoxResult = new TextBox();
+            buttonOpenFile = new Button();
             buttonDone = new Button();
-            buttonFile = new Button();
             buttonHelp = new Button();
             textBox3 = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            openFileDialogTask = new OpenFileDialog();
+            toolTip1 = new ToolTip(components);
             SuspendLayout();
             // 
             // textBoxLoad
@@ -55,31 +58,33 @@
             textBoxResult.Size = new Size(389, 372);
             textBoxResult.TabIndex = 1;
             // 
+            // buttonOpenFile
+            // 
+            buttonOpenFile.Image = (Image)resources.GetObject("buttonOpenFile.Image");
+            buttonOpenFile.Location = new Point(12, 6);
+            buttonOpenFile.Name = "buttonOpenFile";
+            buttonOpenFile.Size = new Size(43, 36);
+            buttonOpenFile.TabIndex = 2;
+            toolTip1.SetToolTip(buttonOpenFile, "Выберите нужный файл\r\n");
+            buttonOpenFile.UseVisualStyleBackColor = true;
+            buttonOpenFile.Click += buttonOpenFile_Click;
+            // 
             // buttonDone
             // 
-            buttonDone.Location = new Point(10, 6);
+            buttonDone.Image = (Image)resources.GetObject("buttonDone.Image");
+            buttonDone.Location = new Point(73, 6);
             buttonDone.Name = "buttonDone";
-            buttonDone.Size = new Size(40, 36);
-            buttonDone.TabIndex = 2;
-            buttonDone.Text = "button1";
+            buttonDone.Size = new Size(50, 36);
+            buttonDone.TabIndex = 3;
             buttonDone.UseVisualStyleBackColor = true;
-            // 
-            // buttonFile
-            // 
-            buttonFile.Location = new Point(73, 6);
-            buttonFile.Name = "buttonFile";
-            buttonFile.Size = new Size(50, 36);
-            buttonFile.TabIndex = 3;
-            buttonFile.Text = "button2";
-            buttonFile.UseVisualStyleBackColor = true;
             // 
             // buttonHelp
             // 
+            buttonHelp.Image = (Image)resources.GetObject("buttonHelp.Image");
             buttonHelp.Location = new Point(819, 5);
             buttonHelp.Name = "buttonHelp";
             buttonHelp.Size = new Size(53, 37);
             buttonHelp.TabIndex = 4;
-            buttonHelp.Text = "button3";
             buttonHelp.UseVisualStyleBackColor = true;
             // 
             // textBox3
@@ -110,6 +115,15 @@
             label2.TabIndex = 7;
             label2.Text = "Result";
             // 
+            // openFileDialogTask
+            // 
+            openFileDialogTask.FileName = "openFileDialogTask";
+            // 
+            // toolTip1
+            // 
+            toolTip1.ToolTipIcon = ToolTipIcon.Info;
+            toolTip1.ToolTipTitle = "Help";
+            // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -119,8 +133,8 @@
             Controls.Add(label1);
             Controls.Add(textBox3);
             Controls.Add(buttonHelp);
-            Controls.Add(buttonFile);
             Controls.Add(buttonDone);
+            Controls.Add(buttonOpenFile);
             Controls.Add(textBoxResult);
             Controls.Add(textBoxLoad);
             Name = "FormMain";
@@ -133,11 +147,13 @@
 
         private TextBox textBoxLoad;
         private TextBox textBoxResult;
+        private Button buttonOpenFile;
         private Button buttonDone;
-        private Button buttonFile;
         private Button buttonHelp;
         private TextBox textBox3;
         private Label label1;
         private Label label2;
+        private OpenFileDialog openFileDialogTask;
+        private ToolTip toolTip1;
     }
 }
