@@ -5,22 +5,27 @@ namespace Tyuiu.BerestenDS.Sprint6.Task3.V5.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
-            var indices = Enumerable.Range(0, rows).ToArray();
-            Array.Sort(indices, (i1, i2) => matrix[i1, 2].CompareTo(matrix[i2, 2]));
-            int[,] sortedMatrix = new int[rows, cols];
-
-            for (int i = 0; i < rows; i++)
+            int[][] rows = new int[matrix.GetLength(0)][];
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                int originalIndex = indices[i];
-                for (int j = 0; j < cols; j++)
+                rows[i] = new int[matrix.GetLength(0)];
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    sortedMatrix[i, j] = matrix[originalIndex, j];
+                    rows[i][j] = matrix[i, j];
+
                 }
             }
+            Array.Sort(rows, (a, b) => a[2].CompareTo(b[2]));
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = rows[i][j];
 
-            return sortedMatrix;
+                }
+            }
+            return matrix;
+
         }
     }
 }
